@@ -27,8 +27,7 @@ export default function TimelinePage() {
       </div>
 
   <select 
-          className="bg-white border border-gray-200 text-sm text-[#64748B]
-          font-medium py-2 mb-[24px] px-4 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500"
+          className="bg-white border border-gray-200 text-sm text-[#64748B] font-medium py-2 mb-[24px] px-4 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         >
