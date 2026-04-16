@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { UserPlus } from "lucide-react";
+import { Loader2 } from "lucide-react"; 
 
 export default function HomePage() {
   const [friendsData, setFriendsData] = useState([]); 
@@ -23,7 +24,15 @@ export default function HomePage() {
     fetchFriends();
   }, []);
 
-  if (loading) return <div className="h-screen flex items-center justify-center font-bold text-emerald-800">Loading your friends...</div>;
+  // if (loading) return <div className="h-screen flex items-center justify-center font-bold text-emerald-800 animate-pulse">Loading your friends...</div>;
+
+
+if (loading) return (
+  <div className="h-screen flex flex-col items-center justify-center gap-2">
+    <Loader2 className="animate-spin text-emerald-800" size={40} />
+    <p className="font-bold text-emerald-800 animate-pulse">Loading your friends...</p>
+  </div>
+);
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-6">
