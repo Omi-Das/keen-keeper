@@ -8,7 +8,8 @@ export default function LayoutWrapper({ children }) {
   console.log("Current Path:", pathname);
 
   const validPaths = ["/", "/timeline", "/stats"];
-  const showNavFooter = validPaths.includes(pathname);
+ const isFriendDetail = pathname.startsWith("/friend"); 
+  const showNavFooter = validPaths.includes(pathname) || isFriendDetail;
 
   return (
     <>
