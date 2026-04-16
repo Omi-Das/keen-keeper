@@ -14,7 +14,10 @@ export default function RootLayout({ children }) {
  <LayoutWrapper>
       {children}
     </LayoutWrapper>
-          <Toaster  position="top-right"/> 
+          <Toaster  position="top-center"
+           containerStyle={{
+    top: 40, 
+  }}/> 
         </TimelineProvider>
       </body>
     </html>
