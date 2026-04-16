@@ -110,9 +110,15 @@ export default function FriendDetail() {
           {/* Relationship Goal */}
           <div className="bg-white p-8 rounded-xl border shadow-sm flex justify-between items-center">
             <div>
-              <div className="flex justify-between gap-100">
+              {/* <div className="flex justify-between sm:gap-50 md:gap-100">
                 <h3 className="text-lg font-bold text-gray-800">Relationship Goal</h3>
                 <button className="btn btn-primary bg-gray-300 rounded-sm btn-ghost text-sm text-black">Edit</button>
+              </div> */}
+              <div className="flex justify-between items-center w-full sm:gap-7 md:gap-100">
+              <h3 className="text-lg font-bold text-gray-800">Relationship Goal</h3>
+              <button className="bg-gray-200 px-4 py-1.5 rounded-md text-sm font-medium text-black hover:bg-gray-300 transition-colors">
+              Edit
+              </button>
               </div>
               <p className="text-gray-500 mt-1">Connect every <span className="font-bold text-gray-800">30 days</span></p>
             </div>
@@ -123,10 +129,11 @@ export default function FriendDetail() {
           <div className="bg-white p-8 rounded-xl border shadow-sm">
             <h3 className="text-lg font-bold text-gray-800 mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
+              
               <button onClick={() => handleInteraction('call')} className="flex flex-col items-center gap-3 p-6 border rounded-xl hover:border-emerald-500 hover:bg-emerald-50 transition group">
                 <Phone className="text-gray-400 group-hover:text-emerald-600" size={24} />
                 <span className="text-sm font-semibold text-gray-600">Call</span>
-              </button>
+              </button> 
               <button onClick={() => handleInteraction('text')} className="flex flex-col items-center gap-3 p-6 border rounded-xl hover:border-emerald-500 hover:bg-emerald-50 transition group">
                 <MessageSquare className="text-gray-400 group-hover:text-emerald-600" size={24} />
                 <span className="text-sm font-semibold text-gray-600">Text</span>

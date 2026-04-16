@@ -15,8 +15,12 @@ export default function RootLayout({ children }) {
       {children}
     </LayoutWrapper>
           <Toaster  position="top-center"
-           containerStyle={{
-    top: 40, 
+          toastOptions={{
+    className: 'max-w-[90%] md:max-w-md mx-auto', 
+    style: {
+      fontSize: '14px',
+      textAlign: 'center',
+    },
   }}/> 
         </TimelineProvider>
       </body>

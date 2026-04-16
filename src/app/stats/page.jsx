@@ -11,10 +11,9 @@ const AnalyticsChart = dynamic(() => import('@/components/AnalyticsChart'), {
 
 export default function StatsPage() {
   const { activities } = useTimeline();
-  
   const data = [
     { name: "Call", value: activities.filter(a => a.type === "Call").length || 0 },
-    { name: "Text", value: activities.filter(a => a.type === "Text").length || 0 },
+      { name: "Text", value: activities.filter(a => a.type === "Text").length || 0 },
     { name: "Video", value: activities.filter(a => a.type === "Video").length || 0 },
   ];
 
