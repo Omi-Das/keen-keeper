@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
  <LayoutWrapper>
       {children}
     </LayoutWrapper>
-          <Toaster /> 
+          <Toaster  position="top-right"/> 
         </TimelineProvider>
       </body>
     </html>

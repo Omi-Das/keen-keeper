@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTimeline } from "@/context/TimelineContext";
 import { Phone, MessageSquare, Video, Bell, Archive, Trash2, Edit2 } from "lucide-react";
 import { useParams } from "next/navigation";
-import { Toaster } from 'react-hot-toast'; // Toaster components only
+// import { Toaster } from 'react-hot-toast'; // Toaster components only
 
 export default function FriendDetail() {
   const { id } = useParams();
@@ -38,7 +38,7 @@ export default function FriendDetail() {
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-6">
-      <Toaster position="top-right" />
+      {/* <Toaster position="top-right" /> */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         
         {/* LEFT COLUMN - PROFILE & ACTIONS */}
