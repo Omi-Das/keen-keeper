@@ -15,11 +15,14 @@
                     Vercel: For reliable cloud hosting and continuous deployment.
 -------------
 =>Key Features:
-                Responsive Smart Navbar: A fully adaptive navigation system that works perfectly on mobile, tablet, and desktop screens.
-                Visual Progress Tracking: Includes dedicated sections for "Timeline" and "Stats" to help users understand their productivity patterns at a glance.
-                High-Speed Performance: Optimized with Next.js architecture to ensure near-instant page transitions and a smooth user experience.
 
+               i) Responsive Smart Navbar: A fully adaptive navigation system that works perfectly on mobile, tablet, and desktop screens.
 
+               ii) Visual Progress Tracking: Includes dedicated sections for "Timeline" and "Stats" to help users understand their productivity patterns at a glance.
+
+               iii) High-Speed Performance: Optimized with Next.js architecture to ensure near-instant page transitions and a smooth user experience.
+
+----
 
 
 
