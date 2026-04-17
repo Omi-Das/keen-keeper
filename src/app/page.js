@@ -34,7 +34,6 @@ if (loading) return (
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-6">
-      {/* Banner */}
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Friends to keep close in your life</h1>
         <p className="text-sm text-gray-600 mb-4">
@@ -47,7 +46,6 @@ if (loading) return (
         </button>
       </section>
 
-      {/* Summary Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
         {[ 
           {l: 'Total Friends', v: friendsData.length}, 
