@@ -51,7 +51,7 @@ if (loading) return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
         {[ 
           {l: 'Total Friends', v: friendsData.length}, 
-          {l: 'On Track', v: friendsData.filter(f => f.status !== ' Overdue').length}, 
+          {l: 'On Track', v: friendsData.filter(f => f.status !== 'Overdue' && f.status !== 'Almost Due').length}, 
           {l: 'Need Attention', v: friendsData.filter(f => f.status === 'Overdue').length}, 
           {l: 'Interactions', v: 12} 
         ].map((s, i) => (
