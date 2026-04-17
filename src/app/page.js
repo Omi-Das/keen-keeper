@@ -24,8 +24,6 @@ export default function HomePage() {
     fetchFriends();
   }, []);
 
-  // if (loading) return <div className="h-screen flex items-center justify-center font-bold text-emerald-800 animate-pulse">Loading your friends...</div>;
-
 
 if (loading) return (
   <div className="h-screen flex flex-col items-center justify-center gap-2">
@@ -53,8 +51,8 @@ if (loading) return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
         {[ 
           {l: 'Total Friends', v: friendsData.length}, 
-          {l: 'On Track', v: friendsData.filter(f => f.status !== 'overdue').length}, 
-          {l: 'Need Attention', v: friendsData.filter(f => f.status === 'overdue').length}, 
+          {l: 'On Track', v: friendsData.filter(f => f.status !== ' Overdue').length}, 
+          {l: 'Need Attention', v: friendsData.filter(f => f.status === 'Overdue').length}, 
           {l: 'Interactions', v: 12} 
         ].map((s, i) => (
           <div key={i} className="bg-white p-6 rounded-xl border text-center">
@@ -64,14 +62,13 @@ if (loading) return (
         ))}
       </div>
 
-      {/* Friends Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {friendsData.map((f) => (
           <Link href={`/friend/${f.id}`} key={f.id} className="bg-white p-6 rounded-2xl border text-center hover:shadow-lg transition">
             <img src={f.picture} alt={f.name} className="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
             <h3 className="font-bold text-black">{f.name}</h3>
             <p className="text-xs text-gray-400 mb-4">{f.days_since_contact} days ago</p>
-     {/* TAG SECTION */}
+
 <div className="flex flex-wrap justify-center gap-2 mb-3">
   {f.tags && f.tags.map((tag, index) => (
     <span 
@@ -84,9 +81,9 @@ if (loading) return (
 </div>
 
 
-      <div className={`py-1 px-4 rounded-full text-xs font-bold inline-block ${f.status === 'overdue' 
+      <div className={`py-1 px-4 rounded-full text-xs font-bold inline-block ${f.status === 'Overdue' 
     ? 'bg-red-400 text-white' 
-    : f.status === 'almost due' 
+    : f.status === 'Almost Due' 
       ? 'bg-[#efad44] text-white' 
       : 'bg-green-900 text-white'
             }`}>

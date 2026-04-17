@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useTimeline } from "@/context/TimelineContext";
 import { Phone, MessageSquare, Video, Bell, Archive, Trash2, Edit2 } from "lucide-react";
 import { useParams } from "next/navigation";
-// import { Toaster } from 'react-hot-toast'; // Toaster components only
 
 export default function FriendDetail() {
   const { id } = useParams();
@@ -38,18 +37,16 @@ export default function FriendDetail() {
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-6">
-      {/* <Toaster position="top-right" /> */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         
-        {/* LEFT COLUMN - PROFILE & ACTIONS */}
         <div className="md:col-span-4 space-y-6">
           <div className="bg-white p-8 rounded-xl border text-center shadow-sm">
             <img src={friend.picture} alt={friend.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-50" />
             <h2 className="text-2xl font-bold text-gray-800">{friend.name}</h2>
             <div className="flex flex-col items-center gap-2 mt-2">
-              <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${friend.status === 'overdue' 
+              <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${friend.status === 'Overdue' 
     ? 'bg-red-400 text-white' 
-    : friend.status === 'almost due' 
+    : friend.status === 'Almost Due' 
       ? 'bg-[#efad44] text-white' 
       : 'bg-green-900 text-white'}`}>
                 {friend.status}
@@ -88,10 +85,8 @@ export default function FriendDetail() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - STATS & QUICK CHECK-IN */}
         <div className="md:col-span-8 space-y-6">
           
-          {/* Top Stats */}
           <div className="grid grid-cols-3 gap-4">
             <div className="bg-white p-6 rounded-xl border text-center shadow-sm">
               <div className="text-3xl font-bold text-gray-800">{friend.days_since_contact}</div>
@@ -107,13 +102,8 @@ export default function FriendDetail() {
             </div>
           </div>
 
-          {/* Relationship Goal */}
           <div className="bg-white p-8 rounded-xl border shadow-sm flex justify-between items-center">
             <div>
-              {/* <div className="flex justify-between sm:gap-50 md:gap-100">
-                <h3 className="text-lg font-bold text-gray-800">Relationship Goal</h3>
-                <button className="btn btn-primary bg-gray-300 rounded-sm btn-ghost text-sm text-black">Edit</button>
-              </div> */}
               <div className="flex justify-between items-center w-full sm:gap-7 md:gap-100">
               <h3 className="text-lg font-bold text-gray-800">Relationship Goal</h3>
               <button className="bg-gray-200 px-4 py-1.5 rounded-md text-sm font-medium text-black hover:bg-gray-300 transition-colors">
@@ -122,10 +112,8 @@ export default function FriendDetail() {
               </div>
               <p className="text-gray-500 mt-1">Connect every <span className="font-bold text-gray-800">30 days</span></p>
             </div>
-            {/* <button className="p-2 border rounded-lg hover:bg-gray-50"><Edit2 size={16}/></button> */}
           </div>
 
-          {/* Quick Check-In */}
           <div className="bg-white p-8 rounded-xl border shadow-sm">
             <h3 className="text-lg font-bold text-gray-800 mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
