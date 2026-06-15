@@ -79,7 +79,7 @@ export default function FriendDetail() {
             </div>
           <div>
               <button className="w-full flex items-center justify-center gap-2 py-4 hover:bg-red-50 transition text-sm font-medium text-red-500">
-              <Trash2 size={16} /> Delete
+              <Trash2 size={18} /> Delete
             </button>
           </div>
           </div>
